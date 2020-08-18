@@ -16,7 +16,8 @@ class AddContact extends Component {
         this.setState({[e.target.name]:e.target.value})
     }
     saveContact(e){
-
+        e.preventDefault();
+        axios
     }
     render() {
         return (
