@@ -34,7 +34,8 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        return response()->json($request);
+        // return response()->json($request);
+        
     }
 
     /**

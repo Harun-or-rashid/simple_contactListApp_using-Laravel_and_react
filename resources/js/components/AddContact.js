@@ -17,12 +17,12 @@ class AddContact extends Component {
     }
     saveContact  (e){
         e.preventDefault();
-       const res= axios.post('/contact',this.state)
-       .then(function (res) {
-        console.log(res);
+       axios.post('/contact',this.state)
+       .then(function (response) {
+        console.log(response);
         })
-        .catch(function (res) {
-        console.log(res);
+        .catch(function (response) {
+        console.log(response);
         });
        
     }
