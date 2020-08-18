@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import axios from 'axios';
 class AddContact extends Component {
     constructor (props) {
 
@@ -9,11 +9,14 @@ class AddContact extends Component {
             email: '',
             phone:'',
         }
-        this.handleInput = this.handleInput.bind(this)
-  
+        this.handleInput = this.handleInput.bind(this),
+        this.saveContact=this.saveContact.bind(this)
     }
     handleInput(e){
         this.setState({[e.target.name]:e.target.value})
+    }
+    saveContact(e){
+
     }
     render() {
         return (
