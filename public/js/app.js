@@ -69979,11 +69979,18 @@ var AddContact = /*#__PURE__*/function (_Component) {
     key: "saveContact",
     value: function saveContact(e) {
       e.preventDefault();
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/contact', this.state).then(function (response) {
+      var res = axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/contact', this.state); // this.setState({
+      //     name:'',email:'',phone:''
+      // });
+
+      res.then(function (response) {
         console.log(response);
       })["catch"](function (response) {
         console.log(response);
-      });
+      }); // if(this.props.status==200){
+      //     this.props.history.push("/");
+      //     // console.log(res);
+      // }
     }
   }, {
     key: "render",

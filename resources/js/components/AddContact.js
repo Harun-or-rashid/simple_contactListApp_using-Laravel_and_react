@@ -17,13 +17,20 @@ class AddContact extends Component {
     }
     saveContact  (e){
         e.preventDefault();
-       axios.post('/contact',this.state)
-       .then(function (response) {
+      const res= axios.post('/contact',this.state);
+        // this.setState({
+        //     name:'',email:'',phone:''
+        // });
+       res.then(function (response) {
         console.log(response);
         })
         .catch(function (response) {
         console.log(response);
         });
+        // if(this.props.status==200){
+        //     this.props.history.push("/");
+        //     // console.log(res);
+        // }
        
     }
     render() {
