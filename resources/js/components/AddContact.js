@@ -15,14 +15,21 @@ class AddContact extends Component {
     handleInput(e){
         this.setState({[e.target.name]:e.target.value})
     }
-    saveContact(e){
+    saveContact  (e){
         e.preventDefault();
-        axios
+       const res= axios.post('/contact',this.state)
+       .then(function (res) {
+        console.log(res);
+        })
+        .catch(function (res) {
+        console.log(res);
+        });
+       
     }
     render() {
         return (
             <div className='container mt-5'>
-                    <form>
+                    <form onSubmit={this.saveContact}>
                         <div className="form-group">
                             <h4 className="badge badge-info">Contact Information</h4>
                             <div className="form-group">
