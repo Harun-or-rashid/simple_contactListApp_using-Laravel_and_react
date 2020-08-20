@@ -10,7 +10,7 @@ super(props)
 
 this.state={
     contacts:[],
-    loading: true
+    loader: true
 }
 this.fetchContacts=this.fetchContacts.bind(this);
 this.componentDidMount=this.componentDidMount.bind(this);
@@ -20,7 +20,7 @@ this.componentDidMount=this.componentDidMount.bind(this);
         .then(function(res){
             if(res.data.sttatus==200){
                 this.setState({contacts:res.data.contacts});
-                this.setState({loading:false});
+                this.setState({loader:false});
             }
             console.log(res);
         }) .catch(function (res) {
@@ -32,7 +32,7 @@ this.componentDidMount=this.componentDidMount.bind(this);
  }
    
     render() {
-        if(this.state.loading){
+        if(this.state.loader){
             return <h3>Loading...</h3>
         }
         return (
