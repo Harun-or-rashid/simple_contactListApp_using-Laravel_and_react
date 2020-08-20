@@ -20,7 +20,7 @@ this.componentDidMount=this.componentDidMount.bind(this);
         .then(function(res){
             if(res.data.sttatus==200){
                 this.setState({contacts:res.data.contacts});
-                this.setState({loader:false});
+                this.setState({loader:true});
             }
             console.log(res);
         }) .catch(function (res) {
@@ -32,7 +32,7 @@ this.componentDidMount=this.componentDidMount.bind(this);
  }
    
     render() {
-        if(this.state.loader){
+        if(!this.state.loader==this.state.contacts){
             return <h3>Loading...</h3>
         }
         return (
