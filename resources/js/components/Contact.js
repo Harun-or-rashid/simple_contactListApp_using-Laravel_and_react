@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { concat } from 'lodash';
 
 export default class Contact extends Component {
     static propTypes = {
@@ -13,7 +14,7 @@ export default class Contact extends Component {
                 <div className="card-body">
                     <div className="row">
 <                       div className="col-md-2 ">
-                            sp
+                            <span>{contact.name[0]}</span>
                         </div>
                     </div>
                 </div>
