@@ -31,32 +31,32 @@ class AddContact extends Component {
         //     this.props.history.push("/");
         //     // console.log(res);
         // }
-       
+
     }
     render() {
         return (
             <div className='container mt-5'>
                     <form onSubmit={this.saveContact}>
                         <div className="form-group">
-                            <h4 className="badge badge-info">Contact Information</h4>
+                            <h4 className="badge badge-info">Contacts Information</h4>
                             <div className="form-group">
                             <input type="text" name="name" className="col-md-5 form-control" value={this.state.name}
-                             onChange={this.handleInput} placeholder="Enter Contact Name" required/>
+                             onChange={this.handleInput} placeholder="Enter Contacts Name" required/>
                             </div>
                             <div className="form-group">
-                             <input type="text" name="email" className="col-md-5  form-control" value={this.state.email} 
+                             <input type="text" name="email" className="col-md-5  form-control" value={this.state.email}
                              onChange={this.handleInput} placeholder="Enter Email" required/>
                             </div>
                             <div className="form-group">
-                            <input type="text" name="phone" className="col-md-5  form-control" value={this.state.phone} 
+                            <input type="text" name="phone" className="col-md-5  form-control" value={this.state.phone}
                              onChange={this.handleInput} placeholder="Enter  Phone" />
                              </div>
                              <div className="form-group">
-                             <input type="submit" className="btn  btn-success" value="Add Contact"   />
+                             <input type="submit" className="btn  btn-success" value="Add Contacts"   />
                              </div>
                         </div>
                     </form>
-                </div>   
+                </div>
         );
     }
 }

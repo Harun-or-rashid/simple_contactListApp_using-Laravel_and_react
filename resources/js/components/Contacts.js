@@ -4,7 +4,7 @@ import loader from 'sass-loader';
 import { bind, concat } from 'lodash';
 import Axios from 'axios';
 
-class Contact extends Component {
+class Contacts extends Component {
 constructor (props){
 super(props)
 
@@ -22,7 +22,7 @@ this.componentDidMount=this.componentDidMount.bind(this);
                 this.setState({loading:false});
                 this.setState({contacts:res.data.contacts});
             }
-            
+
             console.log(response);
         }) .catch(function (response) {
             console.log(response);
@@ -31,8 +31,8 @@ this.componentDidMount=this.componentDidMount.bind(this);
  componentDidMount(){
      this.fetchContacts();
  }
- 
-   
+
+
     render() {
         // list=this.state.contacts.map((contact)=>
         // <li>{concat}</li>
@@ -44,13 +44,13 @@ this.componentDidMount=this.componentDidMount.bind(this);
             <div>
                 <h1>hi</h1>
         {this.state.contact.map(contact=>(
-            <Contact contact={contact} key={contact.id}/>
+            <Contacts contact={contact} key={contact.id}/>
         ))}
             </div>
         );
     }
 }
 
-Contact.propTypes = {};
+Contacts.propTypes = {};
 
-export default Contact;
+export default Contacts;
