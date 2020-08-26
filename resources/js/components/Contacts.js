@@ -22,7 +22,7 @@ this.componentDidMount=this.componentDidMount.bind(this);
         .then(function(response){
             if(response.data.sttatus==200){
                 // this.setState({loading:false});
-                this.setState({contacts:res.data.contacts});
+              let c=  this.setState({contacts:res.data.contacts});
             }
 
             console.log(response);
@@ -36,19 +36,31 @@ this.componentDidMount=this.componentDidMount.bind(this);
 
 
     render() {
-        return (
-            <div>
-                try{
-        {this.state.contact.map(contact=>(
-            <Contact contact={contact} key={contact.id}/>
-        ))}}catch(error){
-                console.log('error')
-            }
-            </div>
-        );
+        // {this.setState.contact.map(contact=>(
+        //     <Contact contact={contact} key={contact.id}/>
+        // ))}
+        // let con = {this.state.contacts};
+        // let conss={this.c};
+//         var y=this.response.data;
+       
+//              y.map( y => {
+//     return <Contact Contact={y} name={y.name} />
+// }) 
+const { c = [] } = this.state
+return(
+  c.map( c => 
+    <Contacts c={c.phone} />
+  )  
+)
+     
     }
 }
 
-Contacts.propTypes = {};
+// Contacts.propTypes = {};
+Contacts.prototype.defaultProps = {
+    contact: []
+}
+
+
 
 export default Contacts;

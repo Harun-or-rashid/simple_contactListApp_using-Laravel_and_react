@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Contacts from './Contacts';
 
 class Contact extends Component {
+    constructor(props) {
+        super(props)
+    }
     render() {
         const {contact}=this.props;
         return (
