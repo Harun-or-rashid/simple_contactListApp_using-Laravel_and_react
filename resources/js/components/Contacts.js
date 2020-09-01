@@ -4,6 +4,7 @@ import loader from 'sass-loader';
 import { bind, concat } from 'lodash';
 import Axios from 'axios';
 import Contact from "./Contact";
+import { Link } from 'react-router-dom';
 
 class Contacts extends Component {
 constructor (props){
@@ -35,27 +36,26 @@ this.componentDidMount=this.componentDidMount.bind(this);
  }
 
 
-    render() {
-        // {this.setState.contact.map(contact=>(
-        //     <Contact contact={contact} key={contact.id}/>
-        // ))}
-        // let con = {this.state.contacts};
-        // let conss={this.c};
+ render() {
+    // {this.setState.contact.map(contact=>(
+    //     <Contact contact={contact} key={contact.id}/>
+    // ))}
+    // let con = {this.state.contacts};
+    // let conss={this.c};
 //         var y=this.response.data;
-       
+   
 //              y.map( y => {
 //     return <Contact Contact={y} name={y.name} />
 // }) 
 const { c = [] } = this.state
 return(
-  c.map( c => 
-    <Contacts c={c.phone} />
-  )  
+c.map( c => 
+<Contacts c={c.phone} />
+)  
 )
-     
-    }
+ 
 }
-
+}
 // Contacts.propTypes = {};
 Contacts.prototype.defaultProps = {
     contact: []

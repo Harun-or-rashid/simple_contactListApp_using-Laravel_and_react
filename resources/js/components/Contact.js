@@ -7,7 +7,8 @@ class Contact extends Component {
         super(props)
     }
     render() {
-        const {contact}=this.props;
+        const { contact } = this.state
+        // const {contact}=this.props;
         return (
             <div>
                 <div className="card">

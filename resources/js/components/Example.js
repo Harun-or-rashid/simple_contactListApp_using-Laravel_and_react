@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import {BrowserRouter as Router,Switch,Route,BrowserRouter} from 'react-router-dom';
 import Nav from "./Nav";
 import Contacts from "./Contacts";
 import AddContact from "./AddContact";

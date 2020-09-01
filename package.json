@@ -26,6 +26,7 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
         "bootswatch": "^4.5.2"
     }
 }
